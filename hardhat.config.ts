@@ -7,8 +7,8 @@ const config: HardhatUserConfig = {
   solidity: "0.8.24",
   networks: {
     // for testnet
-    sepolia: {
-      url: process.env.RPC_URL!,
+    "lisk-sepolia": {
+      url: process.env.LISK_RPC_URL!,
       accounts: [process.env.ACCOUNT_PRIVATE_KEY!],
       gasPrice: 1000000000,
     },
@@ -16,7 +16,7 @@ const config: HardhatUserConfig = {
   etherscan: {
     // Use "123" as a placeholder, because Blockscout doesn't need a real API key, and Hardhat will complain if this property isn't set.
     apiKey: {
-      "sepolia": process.env.API_KEY!,
+      "lisk-sepolia": "123",
     },
     customChains: [
       {
